@@ -1,0 +1,46 @@
+:root{
+    --color-black: #000;
+    --color-white: #fff;
+    --color-red: #9c0909;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font-family:'Trebuchet MS', 'Gill Sans', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+h2 strong{
+    color: var(--color-red);
+}
+
+.clock{
+    display: flex;
+    gap: 45px;
+    flex-wrap: wrap;
+
+}
+
+.clock span{
+    font-size: 150px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.clock span:not(:last-child):after{
+    content: ':';
+    margin-bottom: 25px;
+}
