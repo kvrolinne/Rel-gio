@@ -1,63 +1,46 @@
 :root{
-    --color-dark: #000;
+    --color-black: #000;
     --color-white: #fff;
-    --color-light: #ababab;
-    --color-purple: #5d15a5;
+    --color-red: #9c0909;
 }
 
 *{
     margin: 0;
     padding: 0;
-    background-color: var(--color-dark);
+    background-color: var(--color-black);
     color: var(--color-white);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:'Trebuchet MS', 'Gill Sans', sans-serif;
 }
 
 body{
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    gap: 13px;
+    justify-content: center;
     align-items: center;
-    gap: 16px;
     min-height: 100vh;
+
+}
+
+h2 strong{
+    color: var(--color-red);
 }
 
 .clock{
     display: flex;
-    justify-content: center;
-    gap: 50px;
+    gap: 45px;
     flex-wrap: wrap;
+
 }
 
 .clock span{
-    color: var(--color-white);
     font-size: 150px;
     display: flex;
     align-items: center;
     gap: 50px;
 }
 
-.clock span:not(:last-child)::after{
+.clock span:not(:last-child):after{
     content: ':';
     margin-bottom: 25px;
-    color: var(--color-light);
-}
-
-h2{
-    width: 100%;
-    text-align: center;
-}
-
-h2 strong{
-    color: var(--color-purple);
-}
-
-@media screen and (max-width: 992px) {
-    .clock span{
-        font-size: 50px;
-    }
-
-    .clock span:not(:last-child)::after{
-        display: none;
-    }
 }
