@@ -57,8 +57,7 @@ h2 strong{
         font-size: 50px;
     }
 
-.clock span:not(:last-child):after{
-    content: ':';
-    margin-bottom: 25px;
+    .clock span:not(:last-child)::after{
+        display: none;
     }
 }
